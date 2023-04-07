@@ -14,7 +14,7 @@ namespace Company.Function
 {
     public static class GetResumeCounter
     {
-        [FunctionName("GetResumeCounter")]
+        [FunctionName("GetResumeCounter-sd")]
         public static HttpResponseMessage Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             [CosmosDB(databaseName:"AzureResume", collectionName: "Counter", ConnectionStringSetting = "AzureResumeConnectionString", Id = "1", PartitionKey = "1")] Counter counter,
