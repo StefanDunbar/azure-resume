@@ -6,7 +6,7 @@ My own azure cloud resume
 * Static website in Azure (Blob Storage, HTML/CSS)
 * Azure Functions API (HTTP Trigger, C#, DOTNET 6.0)
 * CosmosDB to store counter (NoSQL DB, Serverless)
-* Azure Key Vault
+* Azure Key Vault (Secrets Management)
 * Azure Front Door and CDN
 * Github Actions (CI/CD)
 * Automation with Workflow:
