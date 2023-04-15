@@ -6,14 +6,18 @@ const functionApiUrl = 'https://getresumecounter-sd.azurewebsites.net/api/GetRes
 
 const getVisitCount = () => {
     let count = 0;
-    fetch(functionApiUrl).then(response => {
-        return response.json();
-    }).then(response => {
-        console.log("Website called function API.")
-        count = response.count;
-        document.getElementById("counter").innerText = count;
-    }).catch(function(error){
-        console.log(error);
-    });
+    fetch(functionApiUrl, {method: 'GET', mode: 'same-origin', credentials: 'include', headers: {'Content-Type': 'application/json'}})
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        }).then(response => {
+            console.log("Website called function API.")
+            count = response.count;
+            document.getElementById("counter").innerText = count;
+        }).catch(function(error){
+            console.log(error);
+        });
     return count;
 }
