@@ -10,7 +10,7 @@ My own azure cloud resume
 * Azure Front Door and CDN
 * Github Actions (CI/CD)
 * Automation with Workflow:
- * Testing for frontend
- * Testing for backend
- * Push changes to Azure if tests are successful
- * Flush cached DNS 
+  * Testing for frontend
+  * Testing for backend
+  * Push changes to Azure if tests are successful
+  * Flush cached DNS 
