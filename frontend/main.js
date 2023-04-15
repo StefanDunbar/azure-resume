@@ -6,7 +6,7 @@ const functionApiUrl = 'https://getresumecounter-sd.azurewebsites.net/api/GetRes
 
 const getVisitCount = () => {
     let count = 0;
-    fetch(functionApiUrl, {method: 'POST', mode: 'cors', credentials: 'include', headers: {'Content-Type': 'application/json'}})
+    fetch(functionApiUrl, {method: 'GET', mode: 'cors', credentials: 'include', headers: {'Content-Type': 'application/json'}})
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
